@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web Aria</title>
+</head>
+
+<body>
+<style>
+body{ font-family:Verdana, Geneva, sans-serif;}
+.js-tabs .tab{display:inline-block;}
+.js-tabs .tab label{ border:1px solid grey;  padding:5px; padding-bottom:4px;}
+.js-tabs .tab.active { border-bottom:0px;padding-bottom:6px; background: # FCC;}
+.js-tabs .panel { display:none;}
+.js-tabs .panel{ margin:0px; margin-top:5px;}
+.js-tabs .hidden {    position: absolute;    left: -10000px;}
+input:checked + label {color:red; font-weight:bold;} 
+.state:checked ~ .panel{   background:#FCC; -webkit-box-shadow: 0px 0px 3px 0px rgba(50, 50, 50, 0.64);
+-moz-box-shadow:    0px 0px 3px 0px rgba(50, 50, 50, 0.64);
+box-shadow:         0px 0px 3px 0px rgba(50, 50, 50, 0.64); list-style-type:none;
+margin:0px;  margin: 5px 0 0;   display:block;    position: absolute;    left: 9px; padding:10px;
+    width: 50%;    z-index: -1;border:1px solid grey; }
+.state:checked + label {    background-color: #FCC; border-bottom:0px;  margin: 6px 0 0; padding-bottom:6px;}
+.tabs ul:first-child{ padding:0px;  margin-bottom:0px;}
+</style>
+<div class="js-tabs"> 
+ 
+    <div class="tabs">
+    <ul >
+    <li  class="tab state">    <input class="state hidden" type="radio" name="houses-state"
+        id="starks" checked />    <label for="starks"  id="starks-tab"
+           >Starks</label>
+             <ul id="starks-panel" class="panel active">
+            <li>Eddard</li>
+            <li>Caitelyn</li>
+            <li>Robb</li>
+            <li>Sansa</li>
+            <li>Brandon</li>
+            <li>Arya</li>
+            <li>Rickon</li>
+        </ul>
+    </li>
+      <li class="tab state">    <input class="state hidden" type="radio" name="houses-state"
+        id="lannisters" /><label  for="lannisters" id="lannisters-tab"
+           >Lannisters</label> 
+               <ul id="lannisters-panel" class="panel">
+            <li>Tywin</li>
+            <li>Cersei</li>
+            <li>Jamie</li>
+            <li>Tyrion</li>
+        </ul>
+    </li>
+      <li  class="tab state">   <input class="state hidden" type="radio" name="houses-state"
+        id="targaryens" /> <label for="targaryens"  id="targaryens-tab"
+          >Targaryens</label> 
+              <ul id="targaryens-panel" class="panel">
+            <li>Viserys</li>
+            <li>Daenerys</li>
+        </ul>
+    </li>
+    </ul>
+
+      
+       
+    </div>
+
+    <div class="panels">
+      
+    
+    
+    </div>
+
+</div>
+</body>
+</html>
